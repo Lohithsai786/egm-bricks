@@ -287,6 +287,9 @@ function Contact() {
           <a href={`tel:${PHONE}`} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-xl transition hover:scale-105">
             <Phone className="h-4 w-4" /> {PHONE}
           </a>
+          <a href={`tel:${PHONE_ALT}`} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-xl transition hover:scale-105">
+            <Phone className="h-4 w-4" /> {PHONE_ALT}
+          </a>
           <a
             href={`https://wa.me/91${PHONE}`}
             target="_blank"
