@@ -8,8 +8,26 @@ import brickCellularLight from "@/assets/brick-cellular-light.jpg";
 
 const MAPS_URL = "https://maps.app.goo.gl/nLL6rCzq3EGSjdbX8";
 const MAPS_EMBED =
-  "https://www.google.com/maps?q=Industrial+park+Plotno-65+Venkatachalam+Kakuturu+Andhra+Pradesh+524320&output=embed";
+  "https://www.google.com/maps?q=Plot+137-B+Industrial+Park+Venkatachalam+Nellore+Andhra+Pradesh&output=embed";
 const PHONE = "9000312013";
+const PHONE_ALT = "8688597038";
+
+const specs = [
+  { icon: Ruler, label: "Block Size", value: "600mm L × 200mm H × 100–300mm W (24\" × 8\" × 4–12\")" },
+  { icon: Gauge, label: "Compressive Strength", value: "Above 3 N/mm²" },
+  { icon: Flame, label: "Fire Resistance", value: "4–6 hrs (depending on block thickness)" },
+  { icon: Feather, label: "Dry Density", value: "850 – 950 Kg/m³" },
+  { icon: Volume2, label: "Sound Reduction", value: "37–42 dB for 200 mm thickness block" },
+  { icon: Thermometer, label: "Thermal Conductivity", value: "0.122 W/(m·K)" },
+  { icon: Palette, label: "Colour", value: "Light Gray" },
+];
+
+const sizeTable = [
+  { size: "600 × 200 × 100 mm", mblock: "0.012", weight: "11 Kg", thickness: "4 inches" },
+  { size: "600 × 200 × 150 mm", mblock: "0.018", weight: "16 Kg", thickness: "6 inches" },
+  { size: "600 × 200 × 200 mm", mblock: "0.024", weight: "20 Kg", thickness: "8 inches" },
+  { size: "600 × 200 × 225 mm", mblock: "0.027", weight: "24 Kg", thickness: "9 inches" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
