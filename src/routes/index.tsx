@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, MapPin, ExternalLink, Feather, Leaf, Wallet, Thermometer, Flame, Hand, MessageCircle } from "lucide-react";
+import { Phone, MapPin, ExternalLink, Feather, Leaf, Wallet, Thermometer, Flame, Hand, MessageCircle, Ruler, Volume2, Palette, Gauge } from "lucide-react";
 import logo from "@/assets/logo.png";
 import brickClc from "@/assets/brick-clc.jpg";
 import brickWeightless from "@/assets/brick-weightless.jpg";
@@ -8,8 +8,26 @@ import brickCellularLight from "@/assets/brick-cellular-light.jpg";
 
 const MAPS_URL = "https://maps.app.goo.gl/nLL6rCzq3EGSjdbX8";
 const MAPS_EMBED =
-  "https://www.google.com/maps?q=Industrial+park+Plotno-65+Venkatachalam+Kakuturu+Andhra+Pradesh+524320&output=embed";
+  "https://www.google.com/maps?q=Plot+137-B+Industrial+Park+Venkatachalam+Nellore+Andhra+Pradesh&output=embed";
 const PHONE = "9000312013";
+const PHONE_ALT = "8688597038";
+
+const specs = [
+  { icon: Ruler, label: "Block Size", value: "600mm L × 200mm H × 100–300mm W (24\" × 8\" × 4–12\")" },
+  { icon: Gauge, label: "Compressive Strength", value: "Above 3 N/mm²" },
+  { icon: Flame, label: "Fire Resistance", value: "4–6 hrs (depending on block thickness)" },
+  { icon: Feather, label: "Dry Density", value: "850 – 950 Kg/m³" },
+  { icon: Volume2, label: "Sound Reduction", value: "37–42 dB for 200 mm thickness block" },
+  { icon: Thermometer, label: "Thermal Conductivity", value: "0.122 W/(m·K)" },
+  { icon: Palette, label: "Colour", value: "Light Gray" },
+];
+
+const sizeTable = [
+  { size: "600 × 200 × 100 mm", mblock: "0.012", weight: "11 Kg", thickness: "4 inches" },
+  { size: "600 × 200 × 150 mm", mblock: "0.018", weight: "16 Kg", thickness: "6 inches" },
+  { size: "600 × 200 × 200 mm", mblock: "0.024", weight: "20 Kg", thickness: "8 inches" },
+  { size: "600 × 200 × 225 mm", mblock: "0.027", weight: "24 Kg", thickness: "9 inches" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,15 +66,16 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="EGM CLC logo" width={36} height={36} className="h-9 w-9 object-contain" />
+          <img src={logo} alt="EGM Constructions logo" width={44} height={44} className="h-11 w-11 object-contain" />
           <span className="text-lg font-bold tracking-tight">
-            EGM <span className="text-primary">CLC</span>
+            EGM <span className="text-primary">Constructions</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex">
           <a href="#home" className="hover:text-foreground">Home</a>
           <a href="#overview" className="hover:text-foreground">Overview</a>
           <a href="#products" className="hover:text-foreground">Products</a>
+          <a href="#specs" className="hover:text-foreground">Specs</a>
           <a href="#location" className="hover:text-foreground">Location</a>
           <a href="#contact" className="hover:text-foreground">Contact</a>
         </nav>
@@ -85,7 +104,7 @@ function Hero() {
       <div className="mx-auto flex max-w-5xl flex-col items-center px-4 py-24 text-center md:py-32">
         <img src={logo} alt="EGM CLC Brick Manufacturers" width={140} height={140} className="mb-8 h-32 w-32 object-contain" />
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl">
-          EGM <span className="text-primary">CLC</span> Brick Manufacturers
+          EGM <span className="text-primary">Constructions</span>
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Manufacturers of Lightweight Cement Bricks (CLC)
@@ -186,6 +205,74 @@ function Products() {
   );
 }
 
+function Specs() {
+  return (
+    <section id="specs" className="border-t border-border/50 py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Technical Specifications</p>
+        <h2 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+          Engineered to exact specification.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
+          Every CLC block we manufacture is tested and certified to meet the technical benchmarks below — built for performance, safety, and consistency on every site.
+        </p>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          {specs.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{s.label}</p>
+                  <p className="mt-1 text-base font-semibold">{s.value}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-extrabold tracking-tight md:text-3xl">Different Sizes & Weights</h3>
+          <p className="mt-2 text-sm text-muted-foreground">Choose from four standard CLC block formats.</p>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-muted/60 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <tr>
+                    <th className="px-5 py-4">Size</th>
+                    <th className="px-5 py-4">M³ / Block</th>
+                    <th className="px-5 py-4">Weight / Block</th>
+                    <th className="px-5 py-4">Thickness</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {sizeTable.map((row) => (
+                    <tr key={row.size} className="transition hover:bg-muted/30">
+                      <td className="px-5 py-4 font-semibold">{row.size}</td>
+                      <td className="px-5 py-4 text-muted-foreground">{row.mblock}</td>
+                      <td className="px-5 py-4">
+                        <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                          {row.weight}
+                        </span>
+                      </td>
+                      <td className="px-5 py-4 text-muted-foreground">{row.thickness}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground">All blocks are 24" length × 8" height. Width varies as listed above.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Location() {
   return (
     <section id="location" className="py-24">
@@ -205,8 +292,8 @@ function Location() {
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-bold">Industrial Park, Venkatachelam</h3>
-                <p className="text-sm text-muted-foreground">Plot No-65, Kakuturu, Nellore, Andhra Pradesh 524320</p>
+                <h3 className="font-bold">Industrial Park, Venkatachalam</h3>
+                <p className="text-sm text-muted-foreground">Plot No. 137-B, Industrial Park, Venkatachalam, Nellore Dist., Andhra Pradesh</p>
               </div>
             </div>
           </div>
@@ -268,6 +355,9 @@ function Contact() {
           <a href={`tel:${PHONE}`} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-xl transition hover:scale-105">
             <Phone className="h-4 w-4" /> {PHONE}
           </a>
+          <a href={`tel:${PHONE_ALT}`} className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-primary shadow-xl transition hover:scale-105">
+            <Phone className="h-4 w-4" /> {PHONE_ALT}
+          </a>
           <a
             href={`https://wa.me/91${PHONE}`}
             target="_blank"
@@ -299,6 +389,7 @@ function Index() {
         <Hero />
         <Overview />
         <Products />
+        <Specs />
         <Location />
         <Contact />
       </main>
