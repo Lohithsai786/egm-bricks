@@ -10,8 +10,6 @@ const MAPS_URL = "https://maps.app.goo.gl/nLL6rCzq3EGSjdbX8";
 const MAPS_EMBED =
   "https://www.google.com/maps?q=Plot+137-B+Industrial+Park+Venkatachalam+Nellore+Andhra+Pradesh&output=embed";
 const PHONE = "9000312013";
-const PHONE_ALT = "8688597038";
-
 const specs = [
   { icon: Ruler, label: "Block Size", value: "600mm L × 200mm H × 100–300mm W (24\" × 8\" × 4–12\")" },
   { icon: Gauge, label: "Compressive Strength", value: "Above 3 N/mm²" },
