@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, MapPin, ExternalLink, Feather, Leaf, Wallet, Thermometer, Flame, Hand, MessageCircle } from "lucide-react";
+import { Phone, MapPin, ExternalLink, Feather, Leaf, Wallet, Thermometer, Flame, Hand, MessageCircle, Ruler, Volume2, Palette, Gauge } from "lucide-react";
 import logo from "@/assets/logo.png";
 import brickClc from "@/assets/brick-clc.jpg";
 import brickWeightless from "@/assets/brick-weightless.jpg";
