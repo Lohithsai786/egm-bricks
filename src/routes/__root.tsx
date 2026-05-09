@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "EGM Bricks" },
       { name: "description", content: "Lovable Generated Project" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "EGM Bricks" },
       { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "EGM Bricks" },
+      { name: "twitter:description", content: "Lovable Generated Project" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/617b7db7-fcbf-42c5-95fb-431903716958/id-preview-20536bfa--d6629d7d-5191-4eed-872c-27d015a61b8a.lovable.app-1778303740448.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/617b7db7-fcbf-42c5-95fb-431903716958/id-preview-20536bfa--d6629d7d-5191-4eed-872c-27d015a61b8a.lovable.app-1778303740448.png" },
     ],
     links: [
       {
