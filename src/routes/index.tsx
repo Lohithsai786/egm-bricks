@@ -224,8 +224,8 @@ function Location() {
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-bold">Industrial Park, Venkatachelam</h3>
-                <p className="text-sm text-muted-foreground">Plot No-65, Kakuturu, Nellore, Andhra Pradesh 524320</p>
+                <h3 className="font-bold">Industrial Park, Venkatachalam</h3>
+                <p className="text-sm text-muted-foreground">Plot No. 137-B, Industrial Park, Venkatachalam, Nellore Dist., Andhra Pradesh</p>
               </div>
             </div>
           </div>
