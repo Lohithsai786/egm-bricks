@@ -104,7 +104,7 @@ function Hero() {
       <div className="mx-auto flex max-w-5xl flex-col items-center px-4 py-24 text-center md:py-32">
         <img src={logo} alt="EGM CLC Brick Manufacturers" width={140} height={140} className="mb-8 h-32 w-32 object-contain" />
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl">
-          EGM <span className="text-primary">CLC</span> Brick Manufacturers
+          EGM <span className="text-primary">Constructions</span>
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Manufacturers of Lightweight Cement Bricks (CLC)
