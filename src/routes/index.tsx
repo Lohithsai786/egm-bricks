@@ -205,6 +205,74 @@ function Products() {
   );
 }
 
+function Specs() {
+  return (
+    <section id="specs" className="border-t border-border/50 py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Technical Specifications</p>
+        <h2 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+          Engineered to exact specification.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
+          Every CLC block we manufacture is tested and certified to meet the technical benchmarks below — built for performance, safety, and consistency on every site.
+        </p>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          {specs.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{s.label}</p>
+                  <p className="mt-1 text-base font-semibold">{s.value}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-extrabold tracking-tight md:text-3xl">Different Sizes & Weights</h3>
+          <p className="mt-2 text-sm text-muted-foreground">Choose from four standard CLC block formats.</p>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-muted/60 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <tr>
+                    <th className="px-5 py-4">Size</th>
+                    <th className="px-5 py-4">M³ / Block</th>
+                    <th className="px-5 py-4">Weight / Block</th>
+                    <th className="px-5 py-4">Thickness</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {sizeTable.map((row) => (
+                    <tr key={row.size} className="transition hover:bg-muted/30">
+                      <td className="px-5 py-4 font-semibold">{row.size}</td>
+                      <td className="px-5 py-4 text-muted-foreground">{row.mblock}</td>
+                      <td className="px-5 py-4">
+                        <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                          {row.weight}
+                        </span>
+                      </td>
+                      <td className="px-5 py-4 text-muted-foreground">{row.thickness}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground">All blocks are 24" length × 8" height. Width varies as listed above.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Location() {
   return (
     <section id="location" className="py-24">
