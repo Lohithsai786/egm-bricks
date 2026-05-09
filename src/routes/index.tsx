@@ -66,15 +66,16 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="EGM CLC logo" width={36} height={36} className="h-9 w-9 object-contain" />
+          <img src={logo} alt="EGM Constructions logo" width={44} height={44} className="h-11 w-11 object-contain" />
           <span className="text-lg font-bold tracking-tight">
-            EGM <span className="text-primary">CLC</span>
+            EGM <span className="text-primary">Constructions</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex">
           <a href="#home" className="hover:text-foreground">Home</a>
           <a href="#overview" className="hover:text-foreground">Overview</a>
           <a href="#products" className="hover:text-foreground">Products</a>
+          <a href="#specs" className="hover:text-foreground">Specs</a>
           <a href="#location" className="hover:text-foreground">Location</a>
           <a href="#contact" className="hover:text-foreground">Contact</a>
         </nav>
