@@ -82,6 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "EGM Bricks" },
       { name: "twitter:description", content: "Lovable Generated Project" },
+      { name: "google-site-verification", content: "QnbtL6fkf8495babs612vERgv5XPOK9Ljr0dfmagtaU" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/617b7db7-fcbf-42c5-95fb-431903716958/id-preview-20536bfa--d6629d7d-5191-4eed-872c-27d015a61b8a.lovable.app-1778303740448.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/617b7db7-fcbf-42c5-95fb-431903716958/id-preview-20536bfa--d6629d7d-5191-4eed-872c-27d015a61b8a.lovable.app-1778303740448.png" },
     ],
